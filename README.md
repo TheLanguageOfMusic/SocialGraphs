@@ -1,4 +1,4 @@
-# The Language Of Music
+## The Language
 
 
 You can use the [editor on GitHub](https://github.com/TheLanguageOfMusic/SocialGraphs/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
