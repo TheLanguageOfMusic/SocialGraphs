@@ -2,14 +2,15 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+    <title>Page Title</title>
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
 
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta name="theme-color" content="#4285f4">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="89172_music_512x512.png" >
@@ -21,9 +22,6 @@
 
     <header class="page-header" role="banner">
       <h1 class="project-name">The Language of Music</h1>
-    </header>
-    
-    </header>
       {% if site.show_downloads %}
         <a href="https://nbviewer.org/github/TheLanguageOfMusic/SocialGraphs/blob/main/code/project_julius.ipynb" class="btn">Explainer Notebook</a>
         <a href="https://drive.google.com/drive/folders/121j5cVK8jS9F-RIRD84YaGZYDMvBw0IM?usp=sharing" class="btn">Get Data</a>
@@ -31,11 +29,10 @@
     </header>
 
 
+
+
+
     <main id="content" class="main-content" role="main">
-    {% if site.show_downloads %}
-        <a href="https://nbviewer.org/github/TheLanguageOfMusic/SocialGraphs/blob/main/code/project_julius.ipynb" class="btn">Explainer Notebook</a>
-        <a href="https://drive.google.com/drive/folders/121j5cVK8jS9F-RIRD84YaGZYDMvBw0IM?usp=sharing" class="btn">Get Data</a>
-    {% endif %}
       {{ content }}
 
       <footer class="site-footer">
