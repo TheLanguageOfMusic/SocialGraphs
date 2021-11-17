@@ -4,6 +4,6 @@ google_analytics:
 theme: jekyll-theme-cayman
 incude:
 - test.md
--readme.md
+-README.md
 
 
