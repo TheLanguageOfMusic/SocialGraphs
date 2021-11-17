@@ -34,7 +34,8 @@ body {
 
 /* Style the header with a grey background and some padding */
 .header {
-  overflow: hidden;
+  overflow: auto;
+  white-space: nowrap;
   background-color: #f1f1f1;
   padding: 10px 80px;
 }
