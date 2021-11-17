@@ -21,9 +21,7 @@
   }
 }
 
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   padding: 0;
@@ -428,6 +426,10 @@ a {
   color: $blockquote-text-color;
 }
 
+
+* {
+  box-sizing: border-box;
+}
 
 /* Slideshow container */
 .slideshow-container {
