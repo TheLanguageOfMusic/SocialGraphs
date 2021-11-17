@@ -1,8 +1,9 @@
-title: Test2
-description: Amanda, Julius & Cecilie3
+description: 
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
-
+incude:
+- test.md
+-readme.md
 
 
