@@ -2,8 +2,6 @@ description: 1
 show_downloads: true
 google_analytics:
 theme: jekyll-theme-cayman
-incude:
--test.md
--README.md
+
 
 
