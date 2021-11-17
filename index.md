@@ -57,7 +57,6 @@ Er dette med nu?
     }
 };
         network = new vis.Network(container, data, options);
-
         return network;
     }
     drawGraph();
