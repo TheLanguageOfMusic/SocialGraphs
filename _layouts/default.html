@@ -75,6 +75,108 @@
       
     <main id="Network">
      <!-- Slideshow container -->
+      
+      <!-- About Section -->
+<div id="about">
+<div class="container">
+<div class="section-title text-center center">
+<h2>What on earth are we talking about?</h2>
+<hr/>
+</div>
+<div class="row">
+<div class="col-xs-12 col-md-4 text-center"> <p></p><img alt="" class="img-responsive" src="img/about.jpg"/> </div>
+<div class="col-xs-12 col-md-8">
+<div class="about-text">
+<h3>Motivation and goal</h3>
+<p>Music is an important part of the everyday life for most people. Whether it be music for a party, for the bus or the inescapable noice you hear in a telephone queue, it affects us in some way or another. But which words are we actually hearing when we put on our headphones? Are we exposing ourselves to positive or negative messages? Are we subconsciously choosing to listen to negative songs or postitive? And lastly how does the artists connect to one another, and what information can we derive from the different groupings? <br/><br/>
+
+These are the questions we seek to answer in this study and to do just that we need some data. But to get these data, we first need to limit our search. There are quite frankly too many artists across the world for us to take them all into account with the limited computer power that we possess, so in order to make it manageble we chose to focus on only one particular genre of music. 
+            </p>
+<p style="text-align: center">
+<b>Hip Hop</b></p>
+<p>
+
+With it's rich history, interesting vocabulary and amazing artists we believe that we can uncover quite a lot of hidden secrets within this branch of music, as well as proving/disproving wether hip hop music is as violent/negative as people believe it to be.
+</p>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-md-4 text-center"> <p></p><img alt="" class="img-responsive" src="img/data.jpg"/> </div>
+<div class="col-xs-12 col-md-8">
+<div class="about-text">
+<h3>Dataset</h3>
+<p>As mentioned, we are using the wikipedia list of important hip hop artists to limit the scope of artists in the hip hop genre. After that we are using the genius API to extract the necesary data and link the artists based on the collaborations they've had on songs. We're using the amount of collaboration between two artists as the weight of the link, and we are adding five attributes to each node: Popularity, followers, twitter-handle, subgenre and instagram-name. Each artist also have as attributes the songs they've made or collaborated on, and these songs have the attributes: hotness, pyongs, release date, page views, media platforms and title.<br/>Read more about the dataset and the lyrics and attribute cleaning in the explainer notebook (link above)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<div id="network">
+<div class="container">
+<div class="col-md-10 col-md-offset-1 section-title text-center">
+<h2>Network</h2>
+<hr/>
+<p>Using this information we created a graph consisting of 1062 nodes and 
+12226 edges as seen below. Feel free to click around to see and read about other features of the graph.</p>
+</div>
+<div class="categories">
+<ul class="cat1">
+<li>
+<ol class="type">
+<!--<li><a href="#" data-filter="*" class="active" style="pointer-events: none;
+   cursor: default;">Top 10 artists</a></li>-->
+<li><a class="active" data-filter=".residential" href="#">Network</a></li>
+<li><a data-filter=".office" href="#">Communities</a></li>
+<li><a data-filter=".commercial" href="#">Hot or not</a></li>
+<li><a data-filter=".followers" href="#">Followers</a></li>
+<li><a data-filter=".genre" href="#">Genres</a></li>
+</ol>
+</li>
+</ul>
+<div class="clearfix"></div>
+</div>
+<div class="row">
+<div class="portfolio-items1">
+<div class="col-sm-12 col-md-12 col-lg-12 residential">
+<div class="portfolio-item1">
+<div class="hover-bg text-center">
+<img alt="Big Daddy Kane" class="img-responsive" src="img/degreeNodes.png"/>
+<p><b><orange>Our network</orange></b><br/>
+                Here we see the network of artists and the songs that they have collaborated on and that therefore connect them. At the edges of the graph, small nodes can be seen without any connections, this can occur if an artist hasn't collaborated with anyone, perhaps because they are unpopular, do not use the Genius platform or simply likes doing things alone.<br/><br/></p></div>
+</div>
+</div>
+<div class="col-sm-12 col-md-12 col-lg-12 office">
+<div class="portfolio-item1">
+<div class="hover-bg text-center">
+<img alt="Communities" class="img-responsive" src="img/graphcommunities.png"/>
+<p></p><p><b><orange>Communities (SCROLL DOWN for pie charts)</orange></b><br/>
+                Communities in dense networks can often be hard to see with the naked eye. The concept is based on the fact that within any network there will be some groups of nodes that are more densely connected than others, this can in this case be caused by the fact that some artists are better friends with one another than others, or maybe because some artists are connected through their chosen genre. <br/>
+                In the graph above 110 different communities were found, this number is of course also influenced by the amount of people who has no actual connection to the graph.<br/>
+                We have decided to check if the artists are in fact connected through their subgenres. Below is twelwe pie charts that show the overall distribution of genres over the members of the six biggest communities. The first piechart includes the rap category, but since it takes up the majority of the chart we decided to omit it in the second version.<br/><br/>This means that for each community there are two pie charts, and the further down you look the smaller the communities.</p></div>
+<div class="col-sm-6 col-md-6 col-lg-6 followers">
+<div class="portfolio-item1">
+<div class="hover-bg text-center">
+<img alt="1NR" class="img-responsive" src="img/PieR1.png"/>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6 followers">
+<div class="portfolio-item1">
+<div class="hover-bg text-center">
+<img alt="1NR" class="img-responsive" src="img/PieNR1.png"/>
+</div>
+</div>
+</div>
+<div class="col-sm-6 col-md-6 col-lg-6 followers">
+<div class="portfolio-item1">
+<div class="hover-bg text-center">
+<img alt="1NR" class="img-responsive" src="img/PieR2.png"/>
+</div>
+</div>
+</div>
+      
 <div class="slideshow-container">
 
   <!-- Full-width images with number and caption text -->
