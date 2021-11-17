@@ -31,7 +31,6 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
   color: $body-text-color;
 }
 
@@ -404,6 +403,7 @@ a {
 .site-footer {
   padding-top: 2rem;
   margin-top: 2rem;
+  text-align: center;
   border-top: solid 1px $hr-border-color;
 
   @include large {
