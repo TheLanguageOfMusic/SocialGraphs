@@ -2,153 +2,40 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="{{ '/assets/css/print.css' | relative_url }}" media="print">
 
-
+{% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
-
-    <meta name="theme-color" content="#4285f4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="icon" href="89172_music_512x512.png" >
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
-    
-   <!-- Favicons
-    ================================================== -->
-<link href="img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href="img/apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="img/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
-<link href="img/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
-<!-- Bootstrap -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
-<!-- Stylesheet
-    ================================================== -->
-<link href="css/style.css" rel="stylesheet" type="text/css"/>
-<link href="css/nivo-lightbox/nivo-lightbox.css" rel="stylesheet" type="text/css"/>
-<link href="css/nivo-lightbox/default.css" rel="stylesheet" type="text/css"/>
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"/>
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
   </head>
-
-
-    
-    <div class="header">
- 
-    <div class="header-right">
-      <a class="active" href="#About">About</a>
-      <a href="#Basic">Basic Stats</a>
-      <a href="#Network">Network</a>
-      <a href="#Sentiment">Sentiment</a>
-      <a href="#TopicModelling">Topic Modelling</a>
-    </div>
-    </div>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
 
     <header class="page-header" role="banner">
-      <h1 class="project-name">The Language of Music</h1>
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+      {% if site.github.is_project_page %}
+        <a href="{{ site.github.repository_url }}" class="btn">View on GitHub</a>
+      {% endif %}
       {% if site.show_downloads %}
-        <a href="https://nbviewer.org/github/TheLanguageOfMusic/SocialGraphs/blob/main/code/project_julius.ipynb" class="btn">Explainer Notebook</a>
-        <a href="https://drive.google.com/drive/folders/121j5cVK8jS9F-RIRD84YaGZYDMvBw0IM?usp=sharing" class="btn">Get Data</a>
+        <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
+        <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
     </header>
 
-     
-    <main id="About">
+    <main id="content" class="main-content" role="main">
       {{ content }}
 
-      
-    <main id="Network">
-     <!-- Slideshow container -->
-      
-
-
-      
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 3</div>
-    <img src="img1.png" style="width:100%">
-    <div class="text">Caption Text</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 3</div>
-    <img src="img2.png" alt=""/>
-    <div class="text">Caption Two</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 3</div>
-    <img class="logo" src="img3.png" alt=""/>
-    <div class="text">Caption Three</div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
-
       <footer class="site-footer">
-        <span class="site-footer-credits"> The language of Music by Cecilie Kosack, Julius Rasmussen and Amanda Sommer </a>.</span>
-
+        {% if site.github.is_project_page %}
+          <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
+        {% endif %}
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
       </footer>
     </main>
-  </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div id="footer">
-<div class="container text-center">
-<div class="social">
-</div>
-<div>
-<div>
-<center>
-
-</center>
-</div>
-</div>
-</div>
-<script src="js/jquery.1.11.1.js" type="text/javascript"></script>
-<script src="js/bootstrap.js" type="text/javascript"></script>
-<script src="js/SmoothScroll.js" type="text/javascript"></script>
-<script src="js/nivo-lightbox.js" type="text/javascript"></script>
-<script src="js/jquery.isotope.js" type="text/javascript"></script>
-<script src="js/jqBootstrapValidation.js" type="text/javascript"></script>
-<script src="js/contact_me.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
-  
-  
-
-
   </body>
 </html>
